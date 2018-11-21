@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>Madlibs</h1>
+
+  <form action='/story' method="POST">
+
+    <ul>
+    {% for question in prompts %}
+    
+      <label for="{{ question }}">{{ question }}</label>
+      <input name="{{ question }}" type="text">
+    
+    {% endfor %}
+    </ul>
+    
+    <button type='submit'>Submit</button>
+
+  </form>
+{% endblock %}
