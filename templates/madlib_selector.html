@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="/storybuilding">
+    <select name="madlib" id="madlib">
+        {% for title in madlibs %}
+        <option value="{{ title }}">{{ title }}</option>
+
+        {% endfor %}
+
+
+    </select>
+    <button type='Submit'>Submit</button>
+</form>
+{% endblock %}

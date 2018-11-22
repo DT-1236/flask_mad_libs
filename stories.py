@@ -18,9 +18,9 @@ class Story:
         'I love to eat a good mango.'
     """
 
-    def __init__(self, words, text):
+    def __init__(self, words, text, title):
         """Create story with words and template text."""
-
+        self.title = title
         self.prompts = words
         self.template = text
 
@@ -36,10 +36,10 @@ class Story:
 
 
 # Here's a story to get you started
+story = Story(["place", "noun", "verb", "adjective", "plural_noun"],
+              """Once upon a time in a long-ago {place}, there lived a
+       large {adjective} {noun}. It loved to {verb} {plural_noun}.""",
+              "The Rithm Method")
 
-
-story = Story(
-    ["place", "noun", "verb", "adjective", "plural_noun"],
-    """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}."""
-)
+# Populate this list with your own stories
+stories = [story for x in range(10)]

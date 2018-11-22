@@ -9,7 +9,7 @@
     {% for question in prompts %}
     
       <label for="{{ question }}">{{ question }}</label>
-      <input name="{{ question }}" type="text">
+      <input required name="{{ question }}" type="text">
     
     {% endfor %}
     </ul>
